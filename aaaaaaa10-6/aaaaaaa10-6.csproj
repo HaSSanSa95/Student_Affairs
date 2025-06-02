@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D53325BE-6C01-4583-9AEC-1478F9782CAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>aaaaaaa10_6</RootNamespace>
+    <AssemblyName>aaaaaaa10-6</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dynamitey, Version=3.0.3.0, Culture=neutral, PublicKeyToken=cbf53ea3aeb972c6, processorArchitecture=MSIL">
+      <HintPath>packages\Dynamitey.3.0.3\lib\net40\Dynamitey.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtendedWPFConverters, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ExtendedWPFConverters.2.0.3\lib\net471\ExtendedWPFConverters.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtendedWPFVisualTreeHelper, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ExtendedWPFVisualTreeHelper.2.0.2\lib\net451\ExtendedWPFVisualTreeHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtraTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DialogBoxForMaterialDesignToolkitInXaml.1.0.0\lib\net45\ExtraTools.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Core.0.9.8\lib\net40\LiveCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.Core.0.9.8\lib\net472\LiveCharts.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=3.1.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.3.1.1-ci753\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=5.1.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.5.1.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.8.0.8\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="splashScreen.xaml.cs">
+      <DependentUpon>splashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\AcademicStages.xaml.cs">
+      <DependentUpon>AcademicStages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\Activities.xaml.cs">
+      <DependentUpon>Activities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\home.xaml.cs">
+      <DependentUpon>home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\homeliness.xaml.cs">
+      <DependentUpon>homeliness.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\interview.xaml.cs">
+      <DependentUpon>interview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\Practicality.xaml.cs">
+      <DependentUpon>Practicality.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\registration.xaml.cs">
+      <DependentUpon>registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\Research.xaml.cs">
+      <DependentUpon>Research.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\StudyMaterials.xaml.cs">
+      <DependentUpon>StudyMaterials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\VacationsAndAbsences.xaml.cs">
+      <DependentUpon>VacationsAndAbsences.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="splashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControl\AcademicStages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\Activities.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\homeliness.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\interview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\Practicality.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\registration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\Research.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\StudyMaterials.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControl\VacationsAndAbsences.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="packages\DialogBoxForMaterialDesignToolkitInXaml.1.0.0\.signature.p7s" />
+    <None Include="packages\DialogBoxForMaterialDesignToolkitInXaml.1.0.0\DialogBoxForMaterialDesignToolkitInXaml.1.0.0.nupkg" />
+    <None Include="packages\Dynamitey.2.0.10.189\.signature.p7s" />
+    <None Include="packages\Dynamitey.2.0.10.189\Dynamitey.2.0.10.189.nupkg" />
+    <None Include="packages\ExtendedWPFConverters.2.0.3\.signature.p7s" />
+    <None Include="packages\ExtendedWPFConverters.2.0.3\ExtendedWPFConverters.2.0.3.nupkg" />
+    <None Include="packages\ExtendedWPFVisualTreeHelper.2.0.2\.signature.p7s" />
+    <None Include="packages\ExtendedWPFVisualTreeHelper.2.0.2\ExtendedWPFVisualTreeHelper.2.0.2.nupkg" />
+    <None Include="packages\LiveCharts.0.9.7\.signature.p7s" />
+    <None Include="packages\LiveCharts.0.9.7\LiveCharts.0.9.7.nupkg" />
+    <None Include="packages\LiveCharts.Wpf.0.9.7\.signature.p7s" />
+    <None Include="packages\LiveCharts.Wpf.0.9.7\LiveCharts.Wpf.0.9.7.nupkg" />
+    <None Include="packages\LiveCharts.Wpf.0.9.7\tools\install.ps1" />
+    <None Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\.signature.p7s" />
+    <None Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\LiveCharts.Wpf.NetCore3.0.9.8.nupkg" />
+    <None Include="packages\MaterialDesignColors.3.1.1-ci753\.signature.p7s" />
+    <None Include="packages\MaterialDesignColors.3.1.1-ci753\docs\README.md" />
+    <None Include="packages\MaterialDesignColors.3.1.1-ci753\MaterialDesignColors.3.1.1-ci753.nupkg" />
+    <None Include="packages\MaterialDesignThemes.5.1.0\.signature.p7s" />
+    <None Include="packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-Black.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-BlackItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-Bold.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-BoldItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-Italic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-Light.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-LightItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-Medium.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-MediumItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-Regular.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-Thin.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\Roboto-ThinItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\RobotoCondensed-Bold.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\RobotoCondensed-BoldItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\RobotoCondensed-Italic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\RobotoCondensed-Light.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\RobotoCondensed-LightItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\build\Resources\Roboto\RobotoCondensed-Regular.ttf" />
+    <None Include="packages\MaterialDesignThemes.5.1.0\docs\README.md" />
+    <None Include="packages\MaterialDesignThemes.5.1.0\MaterialDesignThemes.5.1.0.nupkg" />
+    <None Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\.signature.p7s" />
+    <None Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\Microsoft.Xaml.Behaviors.Wpf.1.1.39.nupkg" />
+    <None Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\tools\Install.ps1" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\avatar1.jpg" />
+    <Resource Include="Images\cartoon-woman-pretty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\logo_academy.png" />
+    <Resource Include="Images\logo_dep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\qw5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\DialogBoxForMaterialDesignToolkitInXaml.1.0.0\lib\net45\ExtraTools.dll" />
+    <Content Include="packages\Dynamitey.2.0.10.189\lib\net40\Dynamitey.dll" />
+    <Content Include="packages\Dynamitey.2.0.10.189\lib\netstandard1.5\Dynamitey.dll" />
+    <Content Include="packages\Dynamitey.2.0.10.189\lib\netstandard2.0\Dynamitey.dll" />
+    <Content Include="packages\Dynamitey.2.0.10.189\lib\portable-net45+sl5+win8+wp8\Dynamitey.dll" />
+    <Content Include="packages\ExtendedWPFConverters.2.0.3\lib\net471\ExtendedWPFConverters.dll" />
+    <Resource Include="packages\ExtendedWPFConverters.2.0.3\lib\net471\ExtendedWPFConverters.xml" />
+    <Content Include="packages\ExtendedWPFConverters.2.0.3\lib\net5.0-windows7.0\ExtendedWPFConverters.dll" />
+    <Resource Include="packages\ExtendedWPFConverters.2.0.3\lib\net5.0-windows7.0\ExtendedWPFConverters.xml" />
+    <Content Include="packages\ExtendedWPFConverters.2.0.3\lib\netcoreapp3.1\ExtendedWPFConverters.dll" />
+    <Resource Include="packages\ExtendedWPFConverters.2.0.3\lib\netcoreapp3.1\ExtendedWPFConverters.xml" />
+    <Content Include="packages\ExtendedWPFVisualTreeHelper.2.0.2\lib\net451\ExtendedWPFVisualTreeHelper.dll" />
+    <Resource Include="packages\ExtendedWPFVisualTreeHelper.2.0.2\lib\net451\ExtendedWPFVisualTreeHelper.xml" />
+    <Content Include="packages\ExtendedWPFVisualTreeHelper.2.0.2\lib\net5.0-windows7.0\ExtendedWPFVisualTreeHelper.dll" />
+    <Resource Include="packages\ExtendedWPFVisualTreeHelper.2.0.2\lib\net5.0-windows7.0\ExtendedWPFVisualTreeHelper.xml" />
+    <Content Include="packages\ExtendedWPFVisualTreeHelper.2.0.2\lib\netcoreapp3.1\ExtendedWPFVisualTreeHelper.dll" />
+    <Resource Include="packages\ExtendedWPFVisualTreeHelper.2.0.2\lib\netcoreapp3.1\ExtendedWPFVisualTreeHelper.xml" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\net40\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\net40\LiveCharts.pdb" />
+    <Resource Include="packages\LiveCharts.0.9.7\lib\net40\LiveCharts.xml" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\net45\LiveCharts.pdb" />
+    <Resource Include="packages\LiveCharts.0.9.7\lib\net45\LiveCharts.xml" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\portable-net45+win8+wp8\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\portable-net45+win8+wp8\LiveCharts.pdb" />
+    <Resource Include="packages\LiveCharts.0.9.7\lib\portable-net45+win8+wp8\LiveCharts.XML" />
+    <Resource Include="packages\LiveCharts.0.9.7\readme.txt" />
+    <Content Include="packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.dll" />
+    <Content Include="packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.pdb" />
+    <Resource Include="packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.XML" />
+    <Content Include="packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll" />
+    <Content Include="packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.pdb" />
+    <Resource Include="packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.XML" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net40\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net40\LiveCharts.Wpf.dll" />
+    <Resource Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net40\LiveCharts.xml" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net6.0-windows7.0\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net6.0-windows7.0\LiveCharts.Wpf.dll" />
+    <Resource Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net6.0-windows7.0\LiveCharts.xml" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net7.0-windows7.0\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net7.0-windows7.0\LiveCharts.Wpf.dll" />
+    <Resource Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net7.0-windows7.0\LiveCharts.xml" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net8.0-windows7.0\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net8.0-windows7.0\LiveCharts.Wpf.dll" />
+    <Resource Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\net8.0-windows7.0\LiveCharts.xml" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\netcoreapp3.1\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\netcoreapp3.1\LiveCharts.Wpf.dll" />
+    <Resource Include="packages\LiveCharts.Wpf.NetCore3.0.9.8\lib\netcoreapp3.1\LiveCharts.xml" />
+    <Resource Include="packages\MaterialDesignColors.3.1.1-ci753\images\MaterialDesignColors.Icon.png" />
+    <Content Include="packages\MaterialDesignColors.3.1.1-ci753\lib\net462\MaterialDesignColors.dll" />
+    <Content Include="packages\MaterialDesignColors.3.1.1-ci753\lib\net462\MaterialDesignColors.pdb" />
+    <Content Include="packages\MaterialDesignColors.3.1.1-ci753\lib\net6.0\MaterialDesignColors.dll" />
+    <Content Include="packages\MaterialDesignColors.3.1.1-ci753\lib\net6.0\MaterialDesignColors.pdb" />
+    <Content Include="packages\MaterialDesignColors.3.1.1-ci753\lib\net8.0\MaterialDesignColors.dll" />
+    <Content Include="packages\MaterialDesignColors.3.1.1-ci753\lib\net8.0\MaterialDesignColors.pdb" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\images\MaterialDesignThemes.Icon.png" />
+    <Content Include="packages\MaterialDesignThemes.5.1.0\lib\net462\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="packages\MaterialDesignThemes.5.1.0\lib\net462\MaterialDesignThemes.Wpf.pdb" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\lib\net462\MaterialDesignThemes.Wpf.xml" />
+    <Content Include="packages\MaterialDesignThemes.5.1.0\lib\net6.0\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="packages\MaterialDesignThemes.5.1.0\lib\net6.0\MaterialDesignThemes.Wpf.pdb" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\lib\net6.0\MaterialDesignThemes.Wpf.xml" />
+    <Content Include="packages\MaterialDesignThemes.5.1.0\lib\net8.0\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="packages\MaterialDesignThemes.5.1.0\lib\net8.0\MaterialDesignThemes.Wpf.pdb" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\lib\net8.0\MaterialDesignThemes.Wpf.xml" />
+    <Resource Include="packages\MaterialDesignThemes.5.1.0\tools\VisualStudioToolsManifest.xml" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Design\Microsoft.Xaml.Behaviors.Design.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.pdb" />
+    <Resource Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.xml" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net5.0-windows7.0\Design\Microsoft.Xaml.Behaviors.DesignTools.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net5.0-windows7.0\Microsoft.Xaml.Behaviors.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net5.0-windows7.0\Microsoft.Xaml.Behaviors.pdb" />
+    <Resource Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net5.0-windows7.0\Microsoft.Xaml.Behaviors.xml" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\netcoreapp3.1\Design\Microsoft.Xaml.Behaviors.DesignTools.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\netcoreapp3.1\Microsoft.Xaml.Behaviors.pdb" />
+    <Resource Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\netcoreapp3.1\Microsoft.Xaml.Behaviors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="packages\MaterialDesignInXamlToolkitAddOns.0.0.6\lib\net471\" />
+    <Folder Include="packages\MaterialDesignInXamlToolkitAddOns.0.0.6\lib\net6.0-windows7.0\" />
+    <Folder Include="packages\MaterialDesignInXamlToolkitAddOns.0.0.6\lib\netcoreapp3.1\" />
+    <Folder Include="packages\MaterialDesignThemes.5.1.1-ci753\build\Resources\Roboto\" />
+    <Folder Include="packages\MaterialDesignThemes.5.1.1-ci753\docs\" />
+    <Folder Include="packages\MaterialDesignThemes.5.1.1-ci753\images\" />
+    <Folder Include="packages\MaterialDesignThemes.5.1.1-ci753\lib\net462\" />
+    <Folder Include="packages\MaterialDesignThemes.5.1.1-ci753\lib\net6.0\" />
+    <Folder Include="packages\MaterialDesignThemes.5.1.1-ci753\lib\net8.0\" />
+    <Folder Include="packages\MaterialDesignThemes.5.1.1-ci753\tools\" />
+    <Folder Include="packages\System.Drawing.Common.4.7.0\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

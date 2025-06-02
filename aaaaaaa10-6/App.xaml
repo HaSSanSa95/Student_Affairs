@@ -1,0 +1,61 @@
+﻿<Application x:Class="aaaaaaa10_6.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:local="clr-namespace:aaaaaaa10_6"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign2.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.LightBlue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Secondary/MaterialDesignColor.LightBlue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToolTip.xaml" />
+
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="lvc:LineSeries">
+                <Setter Property="StrokeThickness" Value="3"></Setter>
+                <Setter Property="Stroke" Value="White"></Setter>
+                <Setter Property="Fill" Value="#4EFFFFFF"></Setter>
+                <Setter Property="PointGeometrySize" Value="0"></Setter>
+                
+                <Setter Property="LineSmoothness" Value="0"></Setter>
+            </Style>
+
+            <Style TargetType="lvc:Axis">
+                <Setter Property="ShowLabels" Value="False"></Setter>
+                <Setter Property="IsEnabled" Value="False"></Setter>
+            </Style>
+
+            <!-- النمط المخصص لـ ToolTip -->
+           <Style x:Key="CustomToolTipStyle" TargetType="ToolTip" BasedOn="{StaticResource MaterialDesignToolTip}">
+                <!-- خلفية نصف شفافة (50% شفافة) باستخدام قيمة RGBA -->
+                <Setter Property="Background" Value="#FFFFFF" /> <!-- قيمة الشفافية هنا 80% -->
+    
+                <!-- لون النص أسود -->
+                <Setter Property="Foreground" Value="Black" />
+    
+                <!-- زيادة حجم الخط ليكون كبيرًا وواضحًا -->
+                <Setter Property="FontSize" Value="20" />
+    
+                <!-- توسيع الحواف الداخلية للنص -->
+                <Setter Property="Padding" Value="15" />
+    
+                <!-- محاذاة المحتوى إلى اليسار -->
+                <Setter Property="HorizontalContentAlignment" Value="Left" />
+    
+                <!-- تحديد سمك الحدود حول الـ ToolTip -->
+                <Setter Property="BorderThickness" Value="2" />
+    
+                <!-- تغيير لون الحدود إلى لون محدد أو باستخدام DynamicResource -->
+                <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDivider}" />
+            </Style>
+
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

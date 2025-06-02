@@ -1,0 +1,176 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:aaaaaaa10_6.userControl"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="aaaaaaa10_6.userControl.registration"
+             mc:Ignorable="d" d:DesignWidth="800" Height="620">
+    <Grid Grid.Column="1" Background="#F6F5F8" x:Name="GridRegisteration">
+
+
+        <materialDesign:ColorZone
+  Padding="16"
+  Mode="PrimaryMid" Height="65" HorizontalAlignment="Center" Width="800" Margin="0,0,0,555" VerticalAlignment="Bottom">
+            <DockPanel>
+                <ToggleButton
+      VerticalAlignment="Center"
+      DockPanel.Dock="Right" FlowDirection="RightToLeft"
+      Style="{StaticResource MaterialDesignSwitchSecondaryToggleButton}" />
+                <StackPanel
+      materialDesign:RippleAssist.IsCentered="True" FlowDirection="RightToLeft"
+      Orientation="Horizontal">
+                    <materialDesign:ColorZone
+        Margin="16,0,0,0"
+        Padding="8,4,8,4"
+        Panel.ZIndex="1"
+        materialDesign:ElevationAssist.Elevation="Dp2"
+        CornerRadius="2"
+        Mode="Standard">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+              Width="Auto" />
+                                <ColumnDefinition
+              Width="*" />
+                                <ColumnDefinition
+              Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button
+            Style="{StaticResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon
+              Kind="Search"
+              Opacity=".56" />
+                            </Button>
+                            <TextBox
+            Grid.Column="1"
+            MinWidth="200"
+            Margin="8,0,0,0"
+            VerticalAlignment="Center"
+            materialDesign:HintAssist.Hint="ادخل اسم للبحث"
+            materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+            BorderThickness="0" HorizontalAlignment="Left" FontFamily="Calibri" />
+                            <Button
+            Grid.Column="2"
+            Style="{StaticResource MaterialDesignToolButton}"/>
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Button
+        Margin="8,0,0,0"
+        Panel.ZIndex="0"
+        Style="{StaticResource MaterialDesignToolForegroundButton}">
+                        <materialDesign:PackIcon
+          Kind="Send" HorizontalAlignment="Left" FlowDirection="RightToLeft" VerticalAlignment="Center" />
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+
+        </materialDesign:ColorZone>
+        <TextBox x:Name="TxtStdName"
+    VerticalAlignment="Bottom"
+    materialDesign:HintAssist.Hint="ادخل اسم الطالب الرباعي" FlowDirection="RightToLeft"
+    Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="425,0,0,470" FontFamily="Calibri" HorizontalAlignment="Left" Width="240">
+            <TextBox.Text>
+                <Binding
+        Path="Text2"
+        UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="TxtStdNumber"
+            VerticalAlignment="Bottom" FlowDirection="RightToLeft"
+            materialDesign:HintAssist.Hint="ادخل رقم الباج" TabIndex="1"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="670,0,0,470" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="110"/>
+        <TextBox x:Name="TxtStdEmail" FlowDirection="RightToLeft"
+            VerticalAlignment="Bottom"
+            materialDesign:HintAssist.Hint="البريد الالكتروني" TabIndex="5"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="305,0,0,410" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="240"/>
+
+        <ComboBox x:Name="CobAcademicAchievement" FlowDirection="RightToLeft"
+  materialDesign:HintAssist.Hint="التحصيل الدراسي"
+  materialDesign:TextFieldAssist.HasClearButton="True" TabIndex="4"
+  ItemsSource="{Binding ShortStringList}"
+  Style="{StaticResource MaterialDesignOutlinedComboBox}" Margin="550,0,0,410" VerticalAlignment="Bottom" FontFamily="Calibri" HorizontalAlignment="Left" Width="231">
+            <ComboBox.SelectedItem>
+                <Binding
+      Mode="TwoWay"
+      Path="SelectedValidationOutlined"
+      UpdateSourceTrigger="PropertyChanged">
+
+                </Binding>
+            </ComboBox.SelectedItem>
+        </ComboBox>
+        <TextBox x:Name="TxtStdSpecialist" FlowDirection="RightToLeft"
+            VerticalAlignment="Bottom"
+            materialDesign:HintAssist.Hint="التخصص" TabIndex="6"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="650,0,0,350" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="130"/>
+        <TextBox x:Name="TxtStdAddress" FlowDirection="RightToLeft"
+            VerticalAlignment="Bottom"
+            materialDesign:HintAssist.Hint="عنوان السكن" TabIndex="7"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="475,0,0,350" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="170"/>
+        <TextBox x:Name="TxtStdPhoneNumber" FlowDirection="RightToLeft"
+            VerticalAlignment="Bottom"
+            materialDesign:HintAssist.Hint="رقم الهاتف" TabIndex="8"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="305,0,0,350" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="165"/>
+
+        <DatePicker x:Name="TxtStdAge" TabIndex="3"  FlowDirection="RightToLeft" materialDesign:HintAssist.Hint="مواليد الطالب" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="300,0,0,470" HorizontalAlignment="Left" Width="120" Height="50" VerticalAlignment="Bottom" />
+        <Image x:Name="picStd" HorizontalAlignment="Left"  Height="170" Margin="145,0,0,350" VerticalAlignment="Bottom" Width="145" Stretch="Fill" Source="/Images/logo.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/Images/logo.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <DatePicker x:Name="TxtStdDepartment" TabIndex="9" FlowDirection="RightToLeft"  materialDesign:HintAssist.Hint="تاريخ المباشرة في العتبة" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="610,0,0,290" HorizontalAlignment="Left" Width="170" Height="50" VerticalAlignment="Bottom" />
+        <ComboBox x:Name="CobٍStdDepartment"
+            materialDesign:HintAssist.Hint="قسم الطالب في العتبة المقدسة"
+            materialDesign:TextFieldAssist.HasClearButton="True" TabIndex="10" FlowDirection="RightToLeft"
+            ItemsSource="{Binding ShortStringList}"
+            Style="{StaticResource MaterialDesignOutlinedComboBox}" Margin="305,0,0,290" VerticalAlignment="Bottom" FontFamily="Calibri" SelectedItem="{Binding SelectedValidationOutlined, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="296"/>
+        <TextBox x:Name="TxtStdServiceNumber"
+            VerticalAlignment="Bottom"
+            materialDesign:HintAssist.Hint="عدد سنوات الخدمة" TabIndex="11" FlowDirection="RightToLeft"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="610,0,0,230" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="170"/>
+        <TextBox x:Name="TxtStdlastCourses" FlowDirection="RightToLeft"
+            VerticalAlignment="Bottom"
+            materialDesign:HintAssist.Hint="الدورات السابقة" TabIndex="12"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="305,0,0,230" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="300"/>
+        <TextBox x:Name="TxtStdExpresiance" FlowDirection="RightToLeft" 
+            VerticalAlignment="Bottom"
+            materialDesign:HintAssist.Hint="الخبرات" TabIndex="13"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="610,0,0,165" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="170"/>
+        <TextBox x:Name="TxtStdFiltrationMethod"
+            VerticalAlignment="Bottom"
+            materialDesign:HintAssist.Hint="طريقة الترشيح" TabIndex="14" FlowDirection="RightToLeft"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="435,0,0,165" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="170"/>
+        <DatePicker x:Name="TxtStdRegisterDate" TabIndex="15" materialDesign:HintAssist.Hint="تاريخ التقديم" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="305,0,0,165" HorizontalAlignment="Left" Width="125" Height="50" VerticalAlignment="Bottom" />
+        <TextBox x:Name="TxtStdDesire"
+            materialDesign:HintAssist.Hint="الرغبة" TabIndex="16" FlowDirection="RightToLeft" 
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="305,465,0,105" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" FontFamily="Calibri" HorizontalAlignment="Left" Width="475"/>
+        <Button x:Name="btnSave" Background="#87CEFA" BorderBrush="#FFFFEEFA" FlowDirection="RightToLeft" Foreground="#000000" Margin="635,0,0,27" HorizontalAlignment="Left" Width="145" Height="32" VerticalAlignment="Bottom">
+            <WrapPanel HorizontalAlignment="Center">
+                <materialDesign:PackIcon Kind="AddCircle" Width="25" FlowDirection="RightToLeft" Height="25" />
+                <TextBlock Text="حفظ البيانات" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+            </WrapPanel>
+        </Button>
+        <Button x:Name="BtnEdit" Background="#87CEFA" BorderBrush="#FFFFEEFA" FlowDirection="RightToLeft" Foreground="#000000" Margin="480,0,0,26" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="150">
+            <WrapPanel HorizontalAlignment="Center">
+                <materialDesign:PackIcon Kind="Edit" Width="25" Height="25" />
+                <TextBlock Text="تعديل البيانات" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+            </WrapPanel>
+        </Button>
+        <Button x:Name="BtnDelete" Background="#87CEFA" BorderBrush="#FFFFEEFA" FlowDirection="RightToLeft" Foreground="#000000" Margin="305,562,0,0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170">
+            <WrapPanel HorizontalAlignment="Center">
+                <materialDesign:PackIcon Kind="Delete" Width="25" Height="25" />
+                <TextBlock Text="حذف البيانات" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+            </WrapPanel>
+        </Button>
+        <Button x:Name="BtnAddStdImage" Background="#87CEFA" BorderBrush="#FFFFEEFA" FlowDirection="RightToLeft" Foreground="#000000" Margin="140,0,0,303" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="150">
+            <WrapPanel HorizontalAlignment="Center">
+                <materialDesign:PackIcon Kind="ImageEdit" Width="25" Height="25" />
+                <TextBlock Text="اضافة صورة" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+            </WrapPanel>
+        </Button>
+    </Grid>
+</UserControl>

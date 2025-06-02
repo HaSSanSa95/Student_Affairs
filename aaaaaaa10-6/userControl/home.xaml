@@ -1,0 +1,170 @@
+﻿<UserControl x:Class="aaaaaaa10_6.userControl.home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:aaaaaaa10_6.userControl"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1100">
+    <Grid FlowDirection="RightToLeft">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="materialDesign:PackIcon">
+                <Setter Property="Width" Value="30"></Setter>
+                <Setter Property="Height" Value="30"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid x:Name="gridw" Grid.Column="0" Background="#F6F6F8" Grid.ColumnSpan="2" Margin="0,0,255,0">
+            <StackPanel Margin="10">
+                <Grid Height="60">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+             BorderBrush="{x:Null}" Background="{x:Null}">
+                        <StackPanel Margin="-5"/>
+                    </Button>
+                </Grid>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Border BorderBrush="White" BorderThickness="5" Margin="20 0" CornerRadius="15">
+                        <materialDesign:Card 
+                 UniformCornerRadius="15" 
+                 BorderThickness="5"
+                 BorderBrush="White" 
+                 Width="110" 
+                 Height="130" 
+                 Background="#F6F6F8">
+                            <StackPanel Margin="10">
+                                <materialDesign:PackIcon Kind="Twitter" Foreground="#29A3EC" />
+                                <TextBlock FontWeight="SemiBold" FontSize="25" Text="280K" Margin="0 10 0 0" />
+                                <TextBlock FontSize="12" Text="Followers" />
+                                <materialDesign:PackIcon Kind="EllipsisHorizontal" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </materialDesign:Card>
+
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="5" Margin="20 0" CornerRadius="15">
+                        <materialDesign:Card  UniformCornerRadius="15" BorderThickness="5"
+                 BorderBrush="White" Width="110" Height="130" Background="#F6F6F8">
+                            <StackPanel Margin="10">
+                                <materialDesign:PackIcon Kind="Instagram">
+                                    <materialDesign:PackIcon.Foreground>
+                                        <LinearGradientBrush StartPoint="1,0" EndPoint="0.5,1">
+                                            <GradientStop Color="#912A73" Offset="0" />
+                                            <GradientStop Color="#FA8E22" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </materialDesign:PackIcon.Foreground>
+                                </materialDesign:PackIcon>
+                                <TextBlock FontWeight="SemiBold" FontSize="25" Text="690K" Margin="0 10 0 0" />
+                                <TextBlock FontSize="12" Text="Followers" />
+                                <materialDesign:PackIcon Kind="EllipsisHorizontal" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="5" Margin="20 0" CornerRadius="15">
+                        <materialDesign:Card  UniformCornerRadius="15" BorderThickness="5"
+                 BorderBrush="White" Width="110" Height="130" Background="#F6F6F8">
+                            <StackPanel Margin="10">
+                                <materialDesign:PackIcon Kind="Youtube" Foreground="Red" />
+                                <TextBlock FontWeight="SemiBold" FontSize="25" Text="2.3M" Margin="0 10 0 0" />
+                                <TextBlock FontSize="12" Text="Followers" />
+                                <materialDesign:PackIcon Kind="EllipsisHorizontal" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="5" Margin="20 0" CornerRadius="15">
+                        <materialDesign:Card  UniformCornerRadius="15" BorderThickness="5"
+                 BorderBrush="White" Width="110" Height="130" Background="#F6F6F8">
+                            <StackPanel Margin="10">
+                                <materialDesign:PackIcon Kind="Facebook" Foreground="#29A3EC" />
+                                <TextBlock FontWeight="SemiBold" FontSize="25" Text="60K" Margin="0 10 0 0" />
+                                <TextBlock FontSize="12" Text="Followers" />
+                                <materialDesign:PackIcon Kind="EllipsisHorizontal" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </Border>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <WrapPanel HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="657" Margin="0,310,0,0" Height="260" VerticalAlignment="Top">
+                <WrapPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WrapPanel.RenderTransform>
+            </WrapPanel>
+            <Border BorderBrush="LightBlue" BorderThickness="2" Margin="40,230,43,215" CornerRadius="15"  >
+                <Button x:Name="add" Background="#87CEFA" BorderBrush="#FFFFEEFA" Foreground="#000000" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="210" Margin="18,28,0,0" Click="add_Click">
+                    <WrapPanel HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="AccountsAdd" Width="25" Height="25" />
+                        <TextBlock Text="واجهة التقديم" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                    </WrapPanel>
+                </Button>
+
+
+
+
+
+            </Border>
+            <Button x:Name="add_Copy" Background="#FFFA8797" BorderBrush="#FFFFEEFA" Foreground="#000000" HorizontalAlignment="Left" VerticalAlignment="Top" Height="114" Width="150" Margin="280,261,0,0">
+                <WrapPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="textbox" Width="25" Height="25" />
+                    <TextBlock Text="واجهة المواد" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="add_Copy1" Background="#FF537E9A" BorderBrush="#FFFFEEFA" Foreground="#000000" VerticalAlignment="Top" Height="115" Margin="440,260,53,0">
+                <WrapPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="NewspaperVariantOutline" Width="25" Height="25" />
+                    <TextBlock Text="واجهة الاجازات والغيابات" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="add_Copy2" Background="#FF4968A4" BorderBrush="#FFFFEEFA" Foreground="#000000" VerticalAlignment="Top" Height="54" Margin="350,456,58,0">
+                <WrapPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="TextBoxEditOutline" Width="25" Height="25" />
+                    <TextBlock Text="واجهة البحوث" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="add_Copy3" Background="#FFDFFA87" BorderBrush="#FFFFEEFA" Foreground="#000000" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="210" Margin="60,386,0,0">
+                <WrapPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="School" Width="25" Height="25" />
+                    <TextBlock Text="واجهة المراحل الدراسية" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="add_Copy4" Background="#FF64A57D" BorderBrush="#FFFFEEFA" Foreground="#000000" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="210" Margin="60,320,0,0">
+                <WrapPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="SmartCard" Width="25" Height="25" />
+                    <TextBlock Text="واجهة المقابلة والاختبار" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="add_Copy5" Background="#FF87FAB8" BorderBrush="#FFFFEEFA" Foreground="#000000" VerticalAlignment="Top" Height="54" Margin="280,386,58,0">
+                <WrapPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="LocalActivity" Width="25" Height="25" />
+                    <TextBlock Text="واجهة النشاطات" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="add_Copy6" Background="#87CEFA" BorderBrush="#FFFFEEFA" Foreground="#000000" VerticalAlignment="Top" Height="64" Margin="59,516,59,0">
+                <WrapPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="TouchTextOutline" Width="25" Height="25" />
+                    <TextBlock Text="واجهة التطبيق العملي" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="add_Copy7" Background="#FFFAD687" BorderBrush="#FFFFEEFA" Foreground="#000000" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="280" Margin="60,455,0,0">
+                <WrapPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="Run" Width="25" Height="25" />
+                    <TextBlock Text="واجهة المعايشة" VerticalAlignment="Center"  FontFamily="Calibri" FontWeight="SemiBold" Margin="10 0" />
+                </WrapPanel>
+            </Button>
+            <DockPanel LastChildFill="False"/>
+
+        </Grid>
+        <StackPanel Grid.Column="1" Background="White" Margin="112,0,0,0">
+            <Border Margin="40 10" CornerRadius="20" Background="#FFFFEEFA"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
